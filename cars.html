@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse Cars — Larry Autos Ibadan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="inner-page">
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">⬡</span>
+      <span class="logo-text">Larry<span class="logo-accent">Autos</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="cars.html" class="nav-link active">Cars</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="https://wa.me/2348012345678" target="_blank" class="btn-nav">WhatsApp</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="section-label">Our Inventory</div>
+    <h1>Browse <span class="accent">Available Cars</span></h1>
+    <p>All vehicles are verified, inspected and ready for sale. Filter to find your perfect match.</p>
+  </div>
+</section>
+
+<!-- ========== SEARCH & FILTERS ========== -->
+<section class="filters-section">
+  <div class="container">
+    <div class="search-bar-wrap">
+      <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="searchInput" class="search-bar" placeholder="Search by brand, model or keyword..." />
+      <button class="search-clear" id="clearSearch" style="display:none">✕</button>
+    </div>
+    <div class="filter-row">
+      <div class="filter-group">
+        <label>Condition</label>
+        <select id="filterCondition" class="filter-select">
+          <option value="">All Conditions</option>
+          <option value="tokunbo">Tokunbo</option>
+          <option value="nigeria used">Nigeria Used</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Type</label>
+        <select id="filterType" class="filter-select">
+          <option value="">All Types</option>
+          <option value="sedan">Sedan</option>
+          <option value="suv">SUV</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Transmission</label>
+        <select id="filterTransmission" class="filter-select">
+          <option value="">All</option>
+          <option value="automatic">Automatic</option>
+          <option value="manual">Manual</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Max Price</label>
+        <select id="filterPrice" class="filter-select">
+          <option value="">Any Price</option>
+          <option value="5000000">Under ₦5M</option>
+          <option value="8000000">Under ₦8M</option>
+          <option value="12000000">Under ₦12M</option>
+          <option value="15000000">Under ₦15M</option>
+        </select>
+      </div>
+      <button class="btn-reset" id="resetFilters">Reset All</button>
+    </div>
+    <div class="results-count" id="resultsCount">Loading cars...</div>
+  </div>
+</section>
+
+<!-- ========== CARS GRID ========== -->
+<section class="cars-section">
+  <div class="container">
+    <div class="cars-grid" id="carsGrid">
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+    </div>
+    <div class="empty-state" id="emptyState" style="display:none">
+      <div class="empty-icon">🚗</div>
+      <h3>No Cars Found</h3>
+      <p>Try adjusting your filters or search terms.</p>
+      <button class="btn-primary" id="emptyReset">Clear Filters</button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">⬡</span>
+          <span class="logo-text">Larry<span class="logo-accent">Autos</span></span>
+        </a>
+        <p>Your most trusted car dealership in Ibadan.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cars.html">Browse Cars</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>📞 +234 801 234 5678</li>
+          <li>✉️ info@larryautos.com</li>
+          <li>📍 12 Ring Road, Ibadan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Larry Autos Ibadan. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+let allCars = [];
+
+fetch('data.json')
+  .then(r => r.json())
+  .then(data => {
+    allCars = data.cars;
+    applyFilters();
+    // Handle URL params (e.g. from footer links)
+    const params = new URLSearchParams(window.location.search);
+    if(params.get('type')) document.getElementById('filterType').value = params.get('type');
+    if(params.get('condition')) document.getElementById('filterCondition').value = params.get('condition');
+    applyFilters();
+  });
+
+function applyFilters() {
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const condition = document.getElementById('filterCondition').value.toLowerCase();
+  const type = document.getElementById('filterType').value.toLowerCase();
+  const transmission = document.getElementById('filterTransmission').value.toLowerCase();
+  const maxPrice = parseInt(document.getElementById('filterPrice').value) || Infinity;
+
+  document.getElementById('clearSearch').style.display = search ? 'block' : 'none';
+
+  const filtered = allCars.filter(car => {
+    const matchSearch = !search || 
+      car.name.toLowerCase().includes(search) ||
+      car.year.toString().includes(search) ||
+      car.condition.toLowerCase().includes(search) ||
+      car.color.toLowerCase().includes(search) ||
+      (car.tags && car.tags.some(t => t.includes(search)));
+    const matchCondition = !condition || car.condition.toLowerCase() === condition;
+    const matchType = !type || (car.tags && car.tags.includes(type));
+    const matchTransmission = !transmission || car.transmission.toLowerCase() === transmission;
+    const matchPrice = car.price <= maxPrice;
+    return matchSearch && matchCondition && matchType && matchTransmission && matchPrice;
+  });
+
+  const grid = document.getElementById('carsGrid');
+  const empty = document.getElementById('emptyState');
+  const count = document.getElementById('resultsCount');
+
+  count.textContent = `Showing ${filtered.length} of ${allCars.length} cars`;
+
+  if(filtered.length === 0) {
+    grid.style.display = 'none';
+    empty.style.display = 'block';
+  } else {
+    grid.style.display = 'grid';
+    empty.style.display = 'none';
+    grid.innerHTML = filtered.map(car => buildCarCard(car)).join('');
+  }
+}
+
+document.getElementById('searchInput').addEventListener('input', applyFilters);
+document.getElementById('filterCondition').addEventListener('change', applyFilters);
+document.getElementById('filterType').addEventListener('change', applyFilters);
+document.getElementById('filterTransmission').addEventListener('change', applyFilters);
+document.getElementById('filterPrice').addEventListener('change', applyFilters);
+document.getElementById('clearSearch').addEventListener('click', () => {
+  document.getElementById('searchInput').value = '';
+  applyFilters();
+});
+document.getElementById('resetFilters').addEventListener('click', resetAll);
+document.getElementById('emptyReset').addEventListener('click', resetAll);
+
+function resetAll() {
+  document.getElementById('searchInput').value = '';
+  document.getElementById('filterCondition').value = '';
+  document.getElementById('filterType').value = '';
+  document.getElementById('filterTransmission').value = '';
+  document.getElementById('filterPrice').value = '';
+  applyFilters();
+}
+</script>
+</body>
+</html>

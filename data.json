@@ -1,0 +1,175 @@
+{
+  "business": {
+    "name": "Larry Autos",
+    "tagline": "Quality Cars for Sale in Ibadan",
+    "phone": "+2348012345678",
+    "whatsapp": "2348012345678",
+    "address": "12 Ring Road, Ibadan, Oyo State, Nigeria",
+    "email": "info@larryautos.com",
+    "instagram": "https://instagram.com/larryautos",
+    "facebook": "https://facebook.com/larryautos"
+  },
+  "cars": [
+    {
+      "id": "001",
+      "name": "Toyota Camry",
+      "year": 2015,
+      "price": 7500000,
+      "condition": "Tokunbo",
+      "mileage": "85,000 km",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Ash Grey",
+      "engine": "2.5L 4-Cylinder",
+      "featured": true,
+      "available": true,
+      "image": "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&q=80",
+        "https://images.unsplash.com/photo-1619976215249-9c2b12ca99fb?w=800&q=80"
+      ],
+      "description": "Clean Toyota Camry 2015 Tokunbo with no hidden issues. Smooth engine, spotless interior, ice-cold AC, and ready to drive off today. All documents intact. Perfect for executives and families alike.",
+      "tags": ["sedan", "toyota", "tokunbo"]
+    },
+    {
+      "id": "002",
+      "name": "Honda Accord",
+      "year": 2016,
+      "price": 8200000,
+      "condition": "Tokunbo",
+      "mileage": "72,000 km",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Pearl White",
+      "engine": "2.4L 4-Cylinder",
+      "featured": true,
+      "available": true,
+      "image": "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
+      ],
+      "description": "Beautiful Honda Accord 2016 in pearl white. No accident history. New tires, full AC, leather interior, reverse camera. One of the cleanest in Ibadan.",
+      "tags": ["sedan", "honda", "tokunbo"]
+    },
+    {
+      "id": "003",
+      "name": "Toyota Highlander",
+      "year": 2014,
+      "price": 14500000,
+      "condition": "Tokunbo",
+      "mileage": "110,000 km",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Midnight Black",
+      "engine": "3.5L V6",
+      "featured": true,
+      "available": true,
+      "image": "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&q=80"
+      ],
+      "description": "Powerful Toyota Highlander 2014 with full option. 7-seater, sunroof, navigation system, leather seats, dual AC. Mechanically sound with full documentation. A premium family SUV.",
+      "tags": ["suv", "toyota", "tokunbo"]
+    },
+    {
+      "id": "004",
+      "name": "Mercedes-Benz C300",
+      "year": 2013,
+      "price": 9800000,
+      "condition": "Tokunbo",
+      "mileage": "95,000 km",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Obsidian Black",
+      "engine": "3.5L V6",
+      "featured": true,
+      "available": true,
+      "image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80"
+      ],
+      "description": "Luxurious Mercedes-Benz C300 2013 in perfect condition. Full leather interior, panoramic sunroof, push-start, reverse camera, and ambient lighting. A statement of class and sophistication.",
+      "tags": ["sedan", "mercedes", "luxury", "tokunbo"]
+    },
+    {
+      "id": "005",
+      "name": "Lexus RX350",
+      "year": 2012,
+      "price": 11200000,
+      "condition": "Tokunbo",
+      "mileage": "130,000 km",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Titanium Silver",
+      "engine": "3.5L V6",
+      "featured": false,
+      "available": true,
+      "image": "https://images.unsplash.com/photo-1563720223523-42d983f6c31d?w=800&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1563720223523-42d983f6c31d?w=800&q=80"
+      ],
+      "description": "Stunning Lexus RX350 2012 with a powerful V6 engine. All-wheel drive, premium Levinson sound system, sunroof, leather, and navigation. No mechanical issues. Ready to go.",
+      "tags": ["suv", "lexus", "luxury", "tokunbo"]
+    },
+    {
+      "id": "006",
+      "name": "Toyota Corolla",
+      "year": 2018,
+      "price": 10500000,
+      "condition": "Tokunbo",
+      "mileage": "60,000 km",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Ice Blue",
+      "engine": "1.8L 4-Cylinder",
+      "featured": false,
+      "available": true,
+      "image": "https://images.unsplash.com/photo-1623869675781-80aa31012a5a?w=800&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1623869675781-80aa31012a5a?w=800&q=80"
+      ],
+      "description": "Very clean Toyota Corolla 2018 with low mileage. Almost brand new feel. Full option with touchscreen, reversing sensors, and immaculate interior. Fuel-efficient and reliable daily driver.",
+      "tags": ["sedan", "toyota", "tokunbo"]
+    },
+    {
+      "id": "007",
+      "name": "Honda CR-V",
+      "year": 2017,
+      "price": 13000000,
+      "condition": "Tokunbo",
+      "mileage": "88,000 km",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Champagne Gold",
+      "engine": "1.5L Turbo",
+      "featured": false,
+      "available": true,
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80"
+      ],
+      "description": "Sporty Honda CR-V 2017 with turbocharged engine. Apple CarPlay, lane assist, sunroof, heated seats, and full safety features. A modern and practical crossover for urban roads.",
+      "tags": ["suv", "honda", "tokunbo"]
+    },
+    {
+      "id": "008",
+      "name": "Hyundai Sonata",
+      "year": 2016,
+      "price": 5900000,
+      "condition": "Nigeria Used",
+      "mileage": "145,000 km",
+      "transmission": "Automatic",
+      "fuel": "Petrol",
+      "color": "Wine Red",
+      "engine": "2.4L 4-Cylinder",
+      "featured": false,
+      "available": true,
+      "image": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+      ],
+      "description": "Reliable Hyundai Sonata 2016 Nigeria used in great shape. Regularly serviced, good engine, strong AC. Perfect for everyday commuting on a budget. No stories.",
+      "tags": ["sedan", "hyundai", "nigeria used"]
+    }
+  ]
+}
